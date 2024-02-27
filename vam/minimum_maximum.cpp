@@ -2,30 +2,39 @@
 using namespace std;
 using ll = long long;
 
-int sum_of_digit(string a){
-    int sum = 0;
-    for (int i = 0 ; i < a.length(); i++){
-        sum += a[i] - '0';
-    }
-    return sum;
-}
-
 int main(){
-    int n, s; cin >> n >> s;
-    int start = pow(10,n-1);
-    int end = start*10;
-    int res1 = -1, res2 = -1;
-    for (int i = start; i <= end; i++){
-        if (sum_of_digit(to_string(i)) == s){
-            res1 = i;
-            break;
+    int t;
+    cin >> t;
+    while(t--){
+        char s[20], c[20];
+        cin >> s >> c;
+        int n1 = strlen(s);
+        int n2 = strlen(c);
+        for (int i = 0; i < n1; i++){
+            if (s[i] == '6'){
+                s[i] = '5';
+            }
         }
-    }
-    for (int i = end; i >= start; i--){
-        if (sum_of_digit(to_string(i)) == s){
-            res2 = i;
-            break;
+        for (int i = 0; i < n2; i++){
+            if (c[i] == '6'){
+                c[i] = '5';
+            }
         }
+        ll min = strtoll(s, NULL, 10) + strtoll(c, NULL, 10);
+        cout << min << " ";
+
+        for (int i = 0; i < n1; i++){
+            if (s[i] == '5'){
+                s[i] = '6';
+            }
+        }
+        for (int i = 0; i < n2; i++){
+            if (c[i] == '5'){
+                c[i] = '6';
+            }
+        }
+        ll max = strtoll(s, NULL, 10) + strtoll(c, NULL, 10);
+        cout << max;
+        cout << endl;
     }
-    cout << res1 << " " << res2;
 }

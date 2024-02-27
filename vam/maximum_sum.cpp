@@ -17,15 +17,19 @@ int main(){
         }
     
     int res = 0;
-    for (int i = 0; i < m; i++){
-        int tmp = pB[n - 1] - pB[i] + pA[i];
-        if (tmp > res){
+    for (int i = 0; i < m; i++){ //loop in a first
+    int tmp = pA[i];
+        auto it = upper_bound(b, b + n, tmp);
+        tmp += pB[n - 1] - pB[it - b - 1];
+        if(tmp > res){
             res = tmp;
         }
     }
-    for (int i = 0; i < n; i++){
-        int tmp = pA[m - 1] - pA[i] + pB[i];
-        if (tmp > res){
+    for (int i = 0; i < n; i++){ //loop in b after
+    int tmp = pB[i];
+        auto it = upper_bound(a, a + m, tmp);
+        tmp += pA[m - 1] - pA[it - a - 1];
+        if(tmp > res){
             res = tmp;
         }
     }
