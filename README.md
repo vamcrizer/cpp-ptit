@@ -147,9 +147,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Vamcrizer - [@Vam](https://www.facebook.com/hvvamc) - vamcrizermcgaming@gmail.com
-A Longg - [@Long](https://www.facebook.com/profile.php?id=100052465243180) - 
-BidenJr - [@Biden](https://www.facebook.com/hung.nguyen.ba.18.11.05/) - hungba1811@gmail.com
+Vamcrizer - [@Vam](https://www.facebook.com/hvvamc) - vamcrizermcgaming@gmail.com <br />
+A Longg - [@Long](https://www.facebook.com/profile.php?id=100052465243180) - <br />
+BidenJr - [@Biden](https://www.facebook.com/hung.nguyen.ba.18.11.05/) - hungba1811@gmail.com <br />
 
 Project Link: [https://github.com/vamcrizer/cpp-ptit](https://github.com/vamcrizer/cpp-ptit)
 
