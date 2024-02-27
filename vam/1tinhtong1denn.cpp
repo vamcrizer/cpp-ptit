@@ -5,7 +5,7 @@ int main(){
     int t;
     cin >> t;
     while(t--){
-    int n; cin >> n;
+    ll n; cin >> n;
     cout << n*(n+1)/2 << endl;
     }
 }
