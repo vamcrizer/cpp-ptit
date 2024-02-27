@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/vamcrizer">
-    <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/06/ptitlogo72.gif" alt="Logo" width="80" height="80">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Logo_PTIT.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">CPP PTIT</h3>
