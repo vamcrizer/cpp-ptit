@@ -20,6 +20,10 @@ int main(){
             n /= i;
         }
     }
+    if (s + 1 == k && n != 1){
+        cout << n;
+        ok = 1;
+    }
     if (ok == 0){
         cout << -1;
     }

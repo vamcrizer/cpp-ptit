@@ -10,6 +10,6 @@ int main(){
     for (int i = 0; i < n; i++){
         cin >> a[i];
     }
-    cout << *max_element(a,a+7) << endl;
+    cout << *max_element(a,a+n) << endl;
     }
 }

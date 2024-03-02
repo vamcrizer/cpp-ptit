@@ -6,10 +6,8 @@ int x[1000000] = {0};
 int main(){
     int t; cin >> t;
     while(t--){
-    ios_base::sync_with_stdio(0); 
-    cin.tie(NULL);cout.tie(NULL);
     int m, n; cin >> m >> n;
-    int a[m][n], b[m][n];
+    int a[m + 5][n + 5], b[m + 5][n + 5];
     for (int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
             cin >> a[i][j];
@@ -20,10 +18,10 @@ int main(){
         for (int j = 0; j < n; j++){
             if(a[i][j] == 1){
                 for (int k = 0; k < m; k++){
-                    b[i][k] = 1;
+                    b[k][j] = 1;
                 }
                 for (int k = 0; k < n; k++){
-                    b[k][j] = 1;
+                    b[i][k] = 1;
                 }
             }
         }

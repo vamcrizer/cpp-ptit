@@ -25,9 +25,6 @@ int main(){
                 break;
             }
         }
-        if (ok == 0){
-            cout << -1;
-        }
         cout << endl;
     }
 }
