@@ -4,45 +4,41 @@ using ll = long long;
 const int MOD = (int)1e9 + 7;
 int x[1000000] = {0};
 
-void sinh(int X[], int n, int &ok){
-    int i = n - 1;
-    while(i >= 1 && X[i] > X[i + 1]){
-        i--;
-    }
-    if (i == 0){
-        ok = 0;
-    } else {
-        int j = n;
-        while(X[i] > X[j]){
-            j--;
-        }
-        swap(X[i], X[j]);
-        reverse(X + i + 1, X + n + 1);
-    }
-}
-
-bool check(){
-    for (int i = 1; i <= n; i++){
-        
-    }
-}
 
 int main(){
     int t; cin >> t;
     while(t--){
         int ok = 1;
-        int n; cin >> n;
-        int X[100];
+        int n, k; cin >> n >> k;
+        int a[n + 5][n + 5];
+        for (int i = 1; i <= n; i++){
+            for (int j = 1; j <= n; j++){
+                cin >> a[i][j];
+            }
+        }
+        int X[n + 5];
         for (int i = 1; i <= n; i++){
             X[i] = i;
         }
-        while(ok){
+        vector<string> res;
+        do{
+            int sum = 0;
             for (int i = 1; i <= n; i++){
-                cout << X[i];
+                sum += a[i][X[i]];
             }
-            sinh(X, n ,ok);
-        cout << " ";
+            if (sum == k){
+                string ans = "";
+                for (int i = 1; i <= n; i++){
+                    ans += to_string(X[i]);
+                    ans += " ";
+                }
+                ans.pop_back();
+                res.push_back(ans);
+            }
+        } while(next_permutation(X + 1, X + n + 1));
+        cout << res.size() << endl;
+        for (auto x : res){
+            cout << x << endl;
         }
-        cout << endl;
     }
 }
