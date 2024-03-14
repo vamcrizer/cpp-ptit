@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main(){
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+	int n; cin >> n;
+	int a[n][n];
+	int count = 1;
+	for(int i = 0; i < n; i++){
+		for(int j = 0; j <= i; j++){
+			a[j][i - j] = count;
+			count++;
+		}
+	}
+	for(int i = 1; i < n; i++){	
+		for(int j = i; j < n; j++){
+			a[j][i + n - 1 - j] = count;
+			count++;
+		}
+	}
+	for(int i = 0; i < n; i++){
+		for(int j = n - 1; j >= 0; j--){
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
+	// Biden
+	return 0;
+}
+
