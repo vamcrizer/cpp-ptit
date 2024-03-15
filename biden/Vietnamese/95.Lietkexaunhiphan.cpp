@@ -22,7 +22,7 @@ int main(){
 		int n; cin >> n;
 		ok = true;
 		// ktao()
-		for(int i = 0; i < n; i++){
+		for(int i = 0; i <= n; i++){
 			X[i] = 0;
 		}
 		// while(chua phai cau hinh cuoi)

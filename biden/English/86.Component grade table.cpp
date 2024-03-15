@@ -39,5 +39,6 @@ int main(){
 	}
 	sort(a, a + n, cmpfunc);
 	print(a, n);
+	// Biden
 	return 0;
 }
