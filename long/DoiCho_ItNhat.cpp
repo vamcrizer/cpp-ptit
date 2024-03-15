@@ -5,12 +5,6 @@ using ll = long long int;
 using ld = long double;
 using str = string;
 
-void in(int a[], int n){
-	for(int i=1; i<=n; i++){
-		cout << a[i] << ' ';
-	}cout << endl;
-}
-
 void sx(int a[], int n){
 	int res = 0;
 	pair<int, int> r[n+5];
