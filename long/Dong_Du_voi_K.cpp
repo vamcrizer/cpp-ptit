@@ -28,7 +28,7 @@ int main(){
 		int a[n+5];
 		for(int i=1; i<=n; i++){
 			cin >> a[i];
-		}sort(a+1, a+n+1);
+		}
 		if(n < 2){
 			cout << "0\n";
 		}else solve(a, n);
