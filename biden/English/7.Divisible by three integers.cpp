@@ -16,13 +16,13 @@ int main(){
 		int x, y, z, n;
 		cin >> x >> y >> z >> n;
 		ll bcnn = lcm(x, lcm(y, z));
-		ll res = ((ll) pow(10, n - 1) + bcnn - 1) /bcnn * bcnn;
+		ll res = ((ll) pow(10, n - 1) + bcnn - 1) / bcnn * bcnn;
 		if(res < pow(10, n)) cout << res << endl;
-		else cout << "-1" << endl;		
+		else cout << "-1" << endl;
 	}
 	// Biden
 	return 0;
 }
 
 // TQ: Tim so nn chia het cho a ma k vuot qua b
-// floor(b + a - 1) / a * a
+// (b + a - 1) / a * a

@@ -5,7 +5,16 @@ using ll = long long int;
 using ld = long double;
 using str = string;
 
-
+void solve(ll a[], int n){
+	ll res = -1e7;
+	for(int i=1; i<=n; i++){
+		ll tmp = 1;
+		for(int j=i; j<=n; j++){
+			tmp *= a[j];
+			res = max(res, tmp);
+		}
+	}cout << max(res, (ll)0) << endl;
+}
 
 int main(){
 	ios_base::sync_with_stdio(false);
@@ -13,17 +22,10 @@ int main(){
 
 	int t; cin >> t;
 	while(t--){
-		int n, q; cin >> n >> q;
-		int a[n+5];
+		int n; cin >> n;
+		ll a[n+5];
 		for(int i=1; i<=n; i++){
 			cin >> a[i];
-		}
-		while(q--){
-			int l, r; cin >> l >> r;
-			int res = 0;
-			for(int i=l; i<=r; i++){
-				res += a[i];
-			}cout << res << endl;
-		}
-	}
+		}solve(a, n);
+	}	
 }

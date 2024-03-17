@@ -10,7 +10,7 @@ void Try(int i, int j){
     if (i == n && j == n){
         cout << s << " ";
     }
-    if (i + 1 <= n && a[i + 1][j] == 1){
+    if (i + 1 <= n && a[i + 1][j] == 1){ 
         s += 'D';
         a[i + 1][j] = 0; //mark done
         Try(i + 1, j);

@@ -13,17 +13,14 @@ int main(){
 
 	int t; cin >> t;
 	while(t--){
-		int n, q; cin >> n >> q;
-		int a[n+5];
-		for(int i=1; i<=n; i++){
-			cin >> a[i];
-		}
-		while(q--){
-			int l, r; cin >> l >> r;
-			int res = 0;
-			for(int i=l; i<=r; i++){
-				res += a[i];
-			}cout << res << endl;
-		}
-	}
+		int n, p; cin >> n >> p;
+		int res = 0;
+		for(int i=2; i<=n; i++){
+			int tmp = i;
+			while(tmp%p==0){
+				++res;
+				tmp /= p;
+			}
+		}cout << res << endl;
+	}	
 }

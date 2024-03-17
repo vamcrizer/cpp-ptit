@@ -5,20 +5,19 @@ using ll = long long int;
 using ld = long double;
 using str = string;
 
-void solve(ll a[], int n){
-	ll r[n+5];
-	r[1] = a[1], r[2] = a[2];
-	deque<ll> d;
-	d.push_back(r[1]);
-	for(int i=3; i<=n; i++){
-		r[i] = d.front() + a[i];
-		while(!d.empty() && r[i-1] > d.back()){
-			d.pop_back();
+void solve(int a[], int n){
+	int l = 1, r = n, res = 0;
+	while(l <= r){
+		if(a[l] == a[r]){
+			++l; --r;
+		}else if(a[l] > a[r]){
+			a[r-1] += a[r];
+			++res; --r;
+		}else{
+			a[l+1] += a[l];
+			++res; ++l;
 		}
-		d.push_back(r[i-1]);
-	}
-	ll res = *max_element(r+1, r+n+1);
-	cout << res << endl;
+	}cout << res << endl;
 }
 
 int main(){
@@ -28,9 +27,9 @@ int main(){
 	int t; cin >> t;
 	while(t--){
 		int n; cin >> n;
-		ll a[n+5];
+		int a[n+5];
 		for(int i=1; i<=n; i++){
 			cin >> a[i];
 		}solve(a, n);
-	}	
+	}
 }

@@ -2,18 +2,20 @@
 using namespace std;
 typedef long long ll;
 
-void pt(ll n){ 
-	map<ll, ll> mp;
-	for(int i = 2; i <= sqrt(n); i++){
+void pt(ll n){
+	vector<ll> v;
+	while(n % 2 == 0){
+		n /= 2;
+		v.push_back(2);
+	}
+	for(int i = 3; i <= sqrt(n); i += 2){
 		while(n % i == 0){
-			mp[i]++;
 			n /= i;
+			v.push_back(i);
 		}
 	}
-	if(n > 1) mp[n]++;
-	auto it = mp.end();
-	it--;
-	cout << it->first << endl;
+	if(n > 1) v.push_back(n);
+	cout << *(v.end() - 1) << endl;
 }
 
 int main(){
