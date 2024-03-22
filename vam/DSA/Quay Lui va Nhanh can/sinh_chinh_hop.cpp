@@ -13,7 +13,6 @@ void in(){
 void Try(int i){
     for (int j = 1; j <= n; j++){
             X[i] = j;
-            check[j] = 1;
             if (i == k){
                 in();
                 cout << endl;

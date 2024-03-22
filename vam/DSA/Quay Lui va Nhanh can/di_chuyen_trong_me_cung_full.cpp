@@ -7,38 +7,25 @@ int a[100][100];
 int ok = 0;
 string s = "";
 
-void Try(int i, int j){
+void Try(int i, int j, string s){
     if (i == n && j == n){
         ok = 1;
         cout << s << " ";
     }
-    if (i + 1 <= n && a[i + 1][j]){
-        s += 'D';
-        a[i + 1][j] = 0;
-        Try(i + 1, j);
-        a[i + 1][j] = 1;
-        s.pop_back();
+    if (i + 1 <= n  && a[i + 1][j] == 1){
+        Try(i + 1, j, s + "D");
+
     }
-    if (j - 1 >= 1 && a[i][j - 1]){
-        s += 'L';
-        a[i][j - 1] = 0;
-        Try(i, j - 1);
-        a[i][j - 1] = 1;
-        s.pop_back();
+    if (j - 1 >= 1 && a[i][j - 1] == 1){
+        Try(i, j - 1, s + "L");
     }
-    if (j + 1 <= n && a[i][j + 1]){
-        s += 'R';
-        a[i][j + 1] = 0;
-        Try(i, j + 1);
-        a[i][j + 1] = 1;
-        s.pop_back();
+    if (j + 1 <= n && a[i][j + 1] == 1){
+        Try(i , j + 1, s + "R");
+
     }
-    if (i - 1 >= 1 && a[i - 1][j]){
-        s += 'U';
-        a[i - 1][j] = 0;
-        Try(i - 1, j);
-        a[i - 1][j] = 1;
-        s.pop_back();
+    if (i - 1 >= 1 && a[i - 1][j] == 1){
+        Try(i - 1, j, s + "U");
+
     }
 }
 
@@ -54,8 +41,7 @@ int main(){
         }
     }
     if (a[1][1] && a[n][n]){
-        a[1][1] = 0;
-        Try(1,1);
+        Try(1,1,"");
     }
     if (!ok){
         cout << -1;
