@@ -9,7 +9,7 @@ int main(){
     while(t--){
         string a; cin >> a;
         for (int i = 0; i < a.length(); i++){
-            if (a[i] >= 97 && a[i] <= 122){
+            if (!isdigit(a[i])){
                 a[i] = ' ';
             }
         }
@@ -19,5 +19,6 @@ int main(){
         while(ss >> word){
             ve.push_back(stoll(word));
         }
+        cout << *max_element(ve.begin(), ve.end()) << endl;
     }
 }
