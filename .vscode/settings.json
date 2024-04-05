@@ -3,6 +3,8 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "system_error": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "string": "cpp",
+        "string_view": "cpp"
     }
 }
