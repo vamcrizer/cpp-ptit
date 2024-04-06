@@ -10,6 +10,8 @@ bool cmp(pair<int,int> a, pair<int,int> b){
 }
 
 int main(){
+    int t; cin >> t;
+    while(t--){
     map <int,int> mp;
     int n; cin >> n;
     for (int i = 1; i <= n; i++){
@@ -25,5 +27,7 @@ int main(){
         for (int j = 0; j < it.second; j++){
             cout << it.first << " ";
         }
+    }
+    cout << endl;
     }
 }
