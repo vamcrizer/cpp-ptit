@@ -5,6 +5,8 @@
         "system_error": "cpp",
         "iosfwd": "cpp",
         "string": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "tuple": "cpp",
+        "chrono": "cpp"
     }
 }
