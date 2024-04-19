@@ -8,17 +8,6 @@ int check[100];
 int sum = 0;
 int a[1000];
 void Try(int sum, int i, int pos){
-    if (sum == k){
-        cout << "[";
-        for (int j = 1; j < i; j++){
-            cout << X[i];
-            if (j == i - 1){
-                cout << "] ";
-            } else {
-                cout << " ";
-            }
-        }
-    }
     for (int j = pos; j <= n; j++){
         if (sum += a[j] <= k){
             X[i] = a[j];
