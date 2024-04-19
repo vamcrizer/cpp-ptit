@@ -19,7 +19,7 @@ int main(){
 		for(int j=0; j<n; j++){
 			if(i != j){
 				auto pos = a[i].find(a[j]);
-				if(pos != a[i].end()) ++res;
+				if(pos != string::npos) ++res;
 			}
 		}
 	}cout << res;

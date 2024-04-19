@@ -10,9 +10,14 @@ int main(){
         string a; cin >> a;
         ll res = 0;
         for (int i = 0; i < a.length(); i++){
-            if (isdigit(a[i])){
-                res += (a[i] - '0');
+            if (!isdigit(a[i])){
+                a[i] = ' ';
             }
+        }
+        stringstream ss(a);
+        string word;
+        while(ss >> word){
+            res += stoll(word);
         }
         cout << res << endl;
     }

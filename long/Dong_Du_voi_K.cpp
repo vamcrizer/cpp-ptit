@@ -10,12 +10,12 @@ using str = string;
 void solve(int a[], int n){
 	int m = *max_element(a+1, a+n+1), res = 0;
 	for(int i=1; i<=m; i++){
-		int dk = 1, tmp = a[1]%i;
+		int ok = 1, tmp = a[1]%i;
 		for(int j=2; j<=n; j++){
 			if(a[j]%i != tmp){
-				dk = 0; break;
+				ok = 0; break;
 			}
-		}res += dk;
+		}res += ok;
 	}cout << res << endl;
 }
 

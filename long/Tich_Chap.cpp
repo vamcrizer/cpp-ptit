@@ -1,20 +1,9 @@
-// LonggVu.
+
 #include<bits/stdc++.h>
 using namespace std;
 using ll = long long int;
 using ld = long double;
 using str = string;
-
-2
-4 4 3
-2 1 0 0
-3 2 1 1
-4 5 2 1
-2 2 9 0
-3 3 3
-1 2 3
-4 5 6
-7 8 9
 
 void solve(ll a[][305], int n, int m, ll h[][5]){
 	ll r[300][300], res = 0;
@@ -33,7 +22,6 @@ void solve(ll a[][305], int n, int m, ll h[][5]){
 int main(){
 	ios_base::sync_with_stdio(0);
 	cin.tie(0); cout.tie(0);
-
 	int t; cin >> t;
 	while(t--){
 		int n, m; cin >> n >> m;
