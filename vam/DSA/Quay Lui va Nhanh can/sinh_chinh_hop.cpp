@@ -11,9 +11,9 @@ void in(){
     }
 }
 void Try(int i){
-    for (int j = 1; j <= n; j++){
+    for (int j = 1; j <= 3; j++){
             X[i] = j;
-            if (i == k){
+            if (i == 3){
                 in();
                 cout << endl;
             } else {
