@@ -17,16 +17,27 @@ int y_8axis[] = {-1, 0, 1, -1, 1, -1, 0, 1};
 
 int main(){
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	string s;
-	cin >> s;
-	int cnt = 0, flip = 0;
-	for(int i = 0; i < s.size(); i++){
-		if((s[i] == 'A' && flip % 2 == 0) || (s[i] == 'B' && flip % 2 == 1)) continue;
-        flip++; cnt++;
+	int t; cin >> t;
+	while(t--){
+		int n, m;
+		cin >> n >> m;
+		int a[n][m];
+		for(int i = 0; i < n; i++)
+			for(int j = 0; j < m; j++)
+				cin >> a[i][j];
+		for(int i = 0; i < n + m - 1; i++){
+			if(i % 2 == 0){
+				for(int k = 0, j = i; k < m; k++, j--){
+					if(j >= 0 && j < n && k >= 0 && k < m) cout << a[j][k] << " ";
+				}
+			} else {
+				for(int k = 0, j = i; k < n; k++, j--){
+					if(j >= 0 && j < m && k >= 0 && k < n) cout << a[k][j] << " ";
+				}
+			}
+		}
+		cout << endl;
 	}
-	if(s[s.size() - 1] == 'B') cnt++;
-	else cnt--;
-	cout << cnt;
 	return 0;
 }
 

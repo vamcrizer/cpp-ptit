@@ -15,18 +15,38 @@ int y_8axis[] = {-1, 0, 1, -1, 1, -1, 0, 1};
 // |---------------------------------\   R
 //                                       .
 
+// idea: tu 1 mang truy nguoc ve day 0 0 0
+
 int main(){
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	string s;
-	cin >> s;
-	int cnt = 0, flip = 0;
-	for(int i = 0; i < s.size(); i++){
-		if((s[i] == 'A' && flip % 2 == 0) || (s[i] == 'B' && flip % 2 == 1)) continue;
-        flip++; cnt++;
+	int t; cin >> t;
+	while(t--){
+		int n; cin >> n;
+		int a[n];
+		for(int i = 0; i < n; i++) cin >> a[i];
+		ll cnt = 0;
+		int ok = 1;
+		while(ok){
+			// cong 1
+			for(int i = 0; i < n; i++){
+				if(a[i] % 2 == 1){
+					a[i]--;
+					cnt++;
+				}
+			}
+			// nhan doi
+			for(int i = 0; i < n; i++) a[i] /= 2;
+			cnt++;
+			// check full 0 -> break
+			for(int i = 0; i < n; i++){
+				if(a[i] != 0){
+					ok = 1;
+					break;
+				} else ok = 0;
+			}
+		}
+		cout << cnt - 1 << endl;
 	}
-	if(s[s.size() - 1] == 'B') cnt++;
-	else cnt--;
-	cout << cnt;
 	return 0;
 }
 
