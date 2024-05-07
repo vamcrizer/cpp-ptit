@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://raw.githubusercontent.com/vamcrizer/vamcrizer.github.io/main/peterparker.jpg?token=GHSAT0AAAAAACNXTFVAYD4AZ76KB57KPC6UZO52IBQ)
+[![Product Name Screen Shot][product-screenshot]](https://raw.githubusercontent.com/vamcrizer/cpp-ptit/main/biden/Screenshot.jpg)
 
 In the sprawling citadel nestled amidst the verdant hills, Kings Vam, Long, and Biden convene in their grand library, where ancient tomes and shimmering scrolls recount the history of kingdoms past. Within the hallowed halls of their fortress, the kings meticulously store their CPP codes, safeguarded by enchanted wards and guarded by vigilant sentinels, ensuring that the wisdom of their realm endures through the ages.
 
@@ -181,4 +181,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/vamcrizer/cpp-ptit/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: https://raw.githubusercontent.com/HungNguyenBa1811/C-Course-at-PTIT-CLC-ver.-/master/images/screenshot.png
+[product-screenshot]: https://raw.githubusercontent.com/vamcrizer/cpp-ptit/main/biden/Screenshot.jpg
