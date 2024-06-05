@@ -3,28 +3,27 @@ using namespace std;
 using ll = long long;
 const int MOD = (int)1e9 + 7;
 
+
+int a[1000001];
 int main(){
     int t; cin >> t;
     while(t--){
-    int n; cin >> n;
-    int a[n];
-    for (int i = 0; i < n; i++){
-        cin >> a[i];
-    }
-    int k; cin >> k;
-    int x; cin >> x;
-    k /= 2;
-    auto it = lower_bound(a, a + n, x);
-    for (int i = k; i >= 1; i--){
-
-        cout << a[it - a - i] << " ";
-    }
-    if (a[it - a] > x){
-        it -= 1;
-    }
-    for (int i = 1; i <= k; i++){
-        cout << a[it - a + i] << " ";
-    }
-    cout << endl;
+        int n; cin >> n;
+        for (int i = 1; i <= n; i++){
+            cin >> a[i];
+        }
+        int k,x; cin >> k >> x;
+        auto it = lower_bound(a + 1 , a + n + 1, x) - a;
+        int l = k / 2;
+        for (int i = it - l ; i < it; i++){
+            cout << a[i] << " ";
+        }
+        if (a[it] == x){
+            it++;
+        }
+        for (int i = it; i < it + l; i++){
+            cout << a[i] << " ";
+        }
+        cout << endl;
     }
 }
